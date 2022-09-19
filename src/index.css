@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
   font-family: "Plus Jakarta Sans",sans-serif;
   color: #100d22;
   font-size: 16px;
   letter-spacing: .03em;
   line-height: 1.7em;
+}
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+section{
+  padding: 80px 0;
+}
+@media screen and (max-width: 1200px){
+  .container {
+      max-width: 92%;
+  }
 }

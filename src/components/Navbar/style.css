@@ -1,0 +1,103 @@
+.navbar-menu{
+    flex-grow: 1;
+    transition: all 0.5s ease;
+}
+.nav-toggler{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.nav-toggler span{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(16, 13, 34);
+    margin-bottom: 5px;
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+}
+.nav-toggler span:nth-child(2){
+    width: 80%;
+}
+.nav-toggler span:nth-child(3){
+    width: 60%;
+}
+.nav-toggler.active span:first-child{
+    transform: rotate(-45deg) translate(-7px, 13px);
+    transition: 0.5s ease;
+}
+.nav-toggler.active span:nth-child(2){
+    width: 100%;
+    transform: rotate(45deg) translate(6px, 0px);
+    transition: 0.5s ease;
+}
+.nav-toggler.active span:last-child{
+    opacity: 0;
+}
+.search::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 31px;
+    width: 1px;
+    background-color: #100d22;
+}
+.search input{
+    width: 48px;
+    transition: all 0.5s ease;
+}
+.search:hover input{
+    width: 150px;
+    transition: all 0.5s ease;
+}
+@media screen and (max-width: 1024px) {
+    .nav-toggler{
+        display: flex;
+    }
+    .navbar .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-menu{
+        position: absolute;
+        width: 100%;
+        top: -500px;
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+    .navbar-menu.active{
+        top: 30px;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 99;
+    }
+    .navbar-menu .navbar-nav{
+        width: 100%;    
+        padding: 1rem 1rem 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-menu .navbar-nav .nav-item{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-bottom: 1px solid #efefef;
+    }
+    .navbar-menu .navbar-nav .nav-item:first-child{
+        display: block;
+        border: none;
+    }
+    .navbar-menu .navbar-nav .nav-item:last-child{
+        border: none;
+    }
+}

@@ -1,0 +1,19 @@
+.wrapper__select-input .select::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    width: 102%;
+    height: 105%;
+    background: linear-gradient(142.07deg,#ab238f .94%,#df3295 34.4%,#fe9d9b 71.35%,#ff7770 100.91%);
+    z-index: -1;
+}
+.pinkGradient{
+    background: linear-gradient(142.07deg,#ab238f .94%,#df3295 34.4%,#fe9d9b 71.35%,#ff7770 100.91%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
